@@ -5,11 +5,18 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <ul id="messages"></ul>
-        <form id="input-area">
-            <input id="message-input" autocomplete="off" /><button>Send</button>
-        </form>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.min.js"></script>
-        <script src="main.js"></script>
+        <div class="login-area">
+            <form id="login-form">
+                <input id="login-input">
+            </form>
+        </div>
+        <div class="chat">
+            <ul id="messages"></ul>
+            <form id="input-area">
+                <input id="message-input" autocomplete="off">
+            </form>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/main.js"></script>
     </body>
 </html>
