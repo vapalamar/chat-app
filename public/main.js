@@ -33,4 +33,11 @@
         newMsg.appendChild(msg);
         messagesView.appendChild(newMsg);
     });
+    
+    socket.addEventListener('new user', function () {
+        var loginArea = document.getElementById('login-area');
+        var chat = document.getElementById('chat');
+        chat.classList.remove('hidden');
+        loginArea.classList.add('hidden');
+    })
 })();

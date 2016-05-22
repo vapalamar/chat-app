@@ -3,20 +3,31 @@
     <head>
         <title>chat-app</title>
         <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' 
+        rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="login-area">
-            <form id="login-form">
-                <input id="login-input">
-            </form>
+        <div id="login-area" class="login-area">
+            <div class="greetings">
+                <h1 class="greet-msg">Welcome to MSG Chat</h1>
+                <h2 class="quote">Simple as 2 + 2</h2>
+            </div>
+            <div class="login-wrapper">
+                <form id="login-form">
+                    <h1 class="login-header">Login</h1>
+                    <input id="login-input" autocomplete="off" placeholder="Username">
+                    <button>Join the chat</button>
+                </form>
+            </div>
         </div>
-        <div class="chat">
+        <div id="chat" class="chat hidden">
             <ul id="messages"></ul>
             <form id="input-area">
                 <input id="message-input" autocomplete="off">
             </form>
         </div>
         <script src="/socket.io/socket.io.js"></script>
-        <script src="/main.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
